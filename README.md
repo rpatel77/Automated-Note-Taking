@@ -40,7 +40,7 @@ Raw Text → n8n Webhook → AI Agent → GitHub API → GitBook Sync
 
 - n8n instance (cloud or self-hosted)
 - GitHub Personal Access Token with repository write permissions
-- AI service API key (for text processing)
+- AI service API key (for text processing) - e.g., OpenAI, Claude, or similar
 - GitBook account (optional, for documentation sync)
 
 ### Configuration
@@ -61,10 +61,10 @@ Raw Text → n8n Webhook → AI Agent → GitHub API → GitBook Sync
 
 ## 📝 Usage
 
-Send raw text to the n8n webhook endpoint:
+Send raw text to the n8n webhook endpoint (replace `YOUR_N8N_INSTANCE_URL` with your actual n8n instance URL):
 
 ```bash
-curl -X POST https://your-n8n-instance.com/webhook/htb-notes \
+curl -X POST https://YOUR_N8N_INSTANCE_URL/webhook/htb-notes \
   -H "Content-Type: application/json" \
   -d '{"content": "Your raw notes here..."}'
 ```
